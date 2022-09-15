@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="static/script/vue.js"></script>
+    <script language="JavaScript">
+       window.onload = function () {
+           var vue = new Vue({
+               "el":"#div0",
+               data:{
+                   msg:"hello"
+               }
+           });
+       }
+
+    </script>
+</head>
+<body>
+    <div id="div0">
+        <input :value="msg"></input>
+    </div>
+</body>
+</html>
