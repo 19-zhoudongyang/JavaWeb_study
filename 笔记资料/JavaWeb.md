@@ -1,4 +1,14 @@
-一、HTML
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [一、HTML](#一-html)
+- [二十、axios](#二十-axios)
+
+<!-- /code_chunk_output -->
+
+# 一、HTML
     1.标签
         (1)html标签： 包裹head标签和body标签
             <html>:开始标签
@@ -163,7 +173,7 @@
             {4}iframe标签：嵌入子页面的框架标签
     2.特点
         (1)解释型语言
-二、CSS
+# 二、CSS
     1.导入环境
         {1}内部样式表
             在html的head标签里写入style标签：<style type="text/css"></style>
@@ -204,8 +214,7 @@
                 (2)relative:相对定位
             {5}float:浮动，可以解除行元素独占一行的特点
         [2]
-
-三、JavaScript
+# 三、JavaScript
     1.客户端的一个脚本语言
     2.导入：
         在html的head标签里声明script标签
@@ -320,7 +329,7 @@
                         event.srcElement.blur();
                     }
                 }
-四、CS和BS模式
+# 四、CS和BS模式
     (一)CS:客户端服务器架构模式
         优点:充分利用客户端机器的资源，减轻服务器的负荷
         缺点:
@@ -332,8 +341,7 @@
             2.维护成本低
         缺点:
             所有任务都是放在客户端的，服务器负荷较重；在服务器端计算完成之后把结果再传输给客户端，因此客户端和服务器端会进行非常频繁的数据通信，从而网络负荷较重
-
-五、WEB容器
+# 五、WEB容器
     (一)Tomcat
         1.部署
         2.使用Servlet和前台交互
@@ -406,8 +414,7 @@
                     request.getServletContext();
                     或在session中获取
                     session.getServletContext();
-
-六、HTTP协议(超文本传输协议)
+# 六、HTTP协议(超文本传输协议)
     (一)作用：
         1.确定了请求和响应数据的格式
     (二)Http Request和Http Response
@@ -450,14 +457,12 @@
                     <!-- 返回值.invalidate() 强制性让会话立即失效 -->
                     <!--  -->
         2.包含两部分：请求和响应
-
-七、服务器内部转发以及客户端重定向
+# 七、服务器内部转发以及客户端重定向
     (一)服务器内部转发：
         request.getRequestDispatcher("").forward(request,response);
     (二)客户端重定向(外部)
         response.sendRedirect("");
-
-八、Thymeleaf(视图模板技术)
+# 八、Thymeleaf(视图模板技术)
     (一)使用
         1.导入jar包
         2.在Web.xml里添加配置(配置上下文参数)
@@ -483,8 +488,7 @@
             th:xxx="@{/}"
         (6)设置点击事件
             th:onclick=""
-
-九、作用域
+# 九、作用域
     (一)保存作用域
         原始情况下，保存作用域可以认为有四个(级别)：
             1.page(页面级别，现在几乎不用)
@@ -510,8 +514,7 @@
                         th:if="${#list.isEmpty(application.变量名)}"
                     else:
                         th:unless="${#application.变量名}"
-
-十、MVC(Model模型 + View视图 + Controller控制器)
+# 十、MVC(Model模型 + View视图 + Controller控制器)
     (一)模型层
         [1]模型分很多种
             1.比较简单的pojo/vo(值对象)
@@ -537,12 +540,10 @@
         (四)DispatcherServlet(核心控制器类)反射读取配置文件
         (五)反射动态获取方法和参数 
         -->
-
-十一、IOC(控制翻转)
+# 十一、IOC(控制翻转)
     (一)耦合/依赖
         设计原则：高内聚低耦合
-
-十二、过滤器(Filter)
+# 十二、过滤器(Filter)
     (一)使用
         1.继承javax.servlet.Filter接口
         2.添加注解或者编写XML配置文件
@@ -556,8 +557,7 @@
             在有多个过滤器类的情况下，哪个过滤器先拦截取决于：
                 (1)使用注解方式，先后顺序取决于类名的排序
                 (2)使用XML方式，取决于XML里配置的先后顺序
-
-十三、监听器
+# 十三、监听器
     [1]类别
         <!-- Servlet监听器 -->
         (一)ServletContextListener
@@ -586,7 +586,7 @@
             <listener>
                 <listener-class>xxx.xxx.类名</listener-class>    
             </listener>
-十四、事务
+# 十四、事务
     (一)引入：
         service是一个整体，要么都成功，要么都失败--->
             事务管理不能一DAO层的单精度方法为单位，而应该以业务层的方法为单位
@@ -599,8 +599,7 @@
         2.从ThreadLocal本地线程里获取数据库连接
         3.setAutoCommit(false):关闭自动提交
         4.commit()提交事务和rollback()回滚事务
-
-十五、XML
+# 十五、XML
     (一)概念
         HTML:超文本标记语言
         XML:可扩展的标记语言
@@ -614,8 +613,7 @@
         1.Node节点
             (1)Element 元素节点
             (2)Text 文本节点
-
-十六、cookies
+# 十六、cookies
     (一)使用
         1.创建一个类继承HttpServlet类
         2.重写service方法
@@ -629,8 +627,7 @@
         1.Cookie.setMaxAge(int second):设置Cookie的有效时长
         2.Cookie.setDomain(pattern):
         3.Cookie.setPath(String url):设置路径和服务器端进行比较，判断是否携带此Cookie
-
-十七、正则表达式
+# 十七、正则表达式
     (一)使用
         1.对象形式:当表达式中有"/"就使用这种
             var reg = new RegExp("正则表达式");
@@ -659,8 +656,7 @@
         [1](./JavaWeb_pic/%E5%9C%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD%E8%A1%A8%E8%BE%BE%5B%E6%88%96%E8%80%85%5D.PNG)
     (七)常用正则表达式
         [1](./JavaWeb_pic/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.PNG)
-
-十八、Ajax
+# 十八、Ajax
     (一)使用
         1.在js文件里声明XMLHttpRequest
             var xmlHttpRequest;
@@ -696,8 +692,7 @@
             }
         4.发送请求
             xmlHttpRequest.send();
-
-十九、Vue在JavaWeb中的使用
+# 十九、Vue在JavaWeb中的使用
     (一)使用
         1.将vue.js包导入Web文件夹
         2.在html文件head标签中的script标签中引入
@@ -794,8 +789,7 @@
                 </body>
             (7)生命周期函数
                 [1](./JavaWeb_pic/vue%E5%AE%9E%E4%BE%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.PNG)
-
-二十、axios
+# 二十、axios
     (一)介绍：axios是一个Ajax框架
     (二)使用
         [1]发送普通异步信息
